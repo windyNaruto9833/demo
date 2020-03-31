@@ -1,0 +1,14 @@
+server:
+  port: 9002
+
+
+spring:
+  application:
+    name: order
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://10.0.0.30:8761/eureka/

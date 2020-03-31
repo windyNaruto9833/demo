@@ -1,0 +1,15 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://10.0.0.30:8761/eureka/
+    healthcheck:
+      enabled: true

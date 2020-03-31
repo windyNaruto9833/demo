@@ -1,0 +1,24 @@
+server:
+  port: 9003
+
+spring:
+  application:
+    name: api
+
+zuul:
+  routes:
+    # 用户服务
+    user:
+      path: /user/**
+      serviceId: user
+    # 用户服务
+    order:
+      path: /order/**
+      serviceId: order
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://10.0.0.30:8761/eureka/
